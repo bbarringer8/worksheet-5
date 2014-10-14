@@ -56,3 +56,25 @@ function total(arbitraryList) {
 	return sum;
 }
 
+function FourKind(list) {
+  list.sort();
+  var equalities = 0;
+  var i = 0;
+  while (i !== list.length - 3) {
+    if (list[i] === list[i + 3]) {
+      equalities = equalities + 1;
+    }
+    i = i + 1;
+  }
+  if (equalities >= 1) {
+    return total(list);
+  } 
+  else {
+    return 0;
+  }
+} 
+
+  
+
+
+
